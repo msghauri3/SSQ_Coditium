@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Paper, Container, Box, Button } from '@mui/material';
+import { Paper, Box, Button } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
 const LinksBar = () => {
@@ -11,6 +11,7 @@ const LinksBar = () => {
     { id: 'about', label: 'AI', path: '/about' },
     { id: 'services', label: 'Our Team', path: '/services' },
     { id: 'portfolio', label: 'Portfolio', path: '/portfolio' },
+    { id: 'coditium-services', label: 'Services', path: '/coditium-services' },
     { id: 'contact', label: 'Contact', path: '/contact' }
   ];
 
@@ -32,60 +33,44 @@ const LinksBar = () => {
         top: 0, 
         zIndex: 100,
         borderRadius: 0,
-        backgroundColor: 'white',
+        backgroundColor: '#002e5b',
       }}
     >
-      <Container maxWidth="lg">
-        <Box sx={{ 
-          display: 'flex', 
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          py: 1.5
-        }}>
-          {/* Logo from public folder with specific dimensions */}
-          <Box sx={{ 
-            display: 'flex',
-            alignItems: 'center'
-          }}>
-            <img 
-              src="/logo02.png"
-              alt="Company Logo" 
-              style={{ 
-                width: '200px',
-                height: '60px',
-                objectFit: 'contain'
+      <Box sx={{ 
+        display: 'flex', 
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        py: 1.5,
+        pl: 0
+      }}>
+        {/* Links aligned to the left */}
+        <Box sx={{ display: 'flex' }}>
+          {tabs.map((tab) => (
+            <Button
+              key={tab.id}
+              component={Link}
+              to={tab.path}
+              onClick={() => setActiveTab(tab.id)}
+              sx={{
+                color: activeTab === tab.id ? 'white' : 'rgba(255, 255, 255, 0.8)',
+                borderBottom: activeTab === tab.id ? '3px solid' : '3px solid transparent',
+                borderColor: 'white',
+                borderRadius: 0,
+                px: 3,
+                transition: 'all 0.3s ease',
+                fontSize: '0.9rem',
+                fontWeight: activeTab === tab.id ? 'bold' : 'normal',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white'
+                }
               }}
-            />
-          </Box>
-          
-          {/* Links aligned to the right */}
-          <Box sx={{ display: 'flex' }}>
-            {tabs.map((tab) => (
-              <Button
-                key={tab.id}
-                component={Link}
-                to={tab.path}
-                onClick={() => setActiveTab(tab.id)}
-                sx={{
-                  color: activeTab === tab.id ? '#002e5b' : 'text.secondary',
-                  borderBottom: activeTab === tab.id ? '3px solid' : '3px solid transparent',
-                  borderColor: '#002e5b',
-                  borderRadius: 0,
-                  px: 3,
-                  transition: 'all 0.3s ease',
-                  fontSize: '0.9rem',
-                  '&:hover': {
-                    backgroundColor: 'rgba(0, 46, 91, 0.05)',
-                    color: '#002e5b'
-                  }
-                }}
-              >
-                {tab.label}
-              </Button>
-            ))}
-          </Box>
+            >
+              {tab.label}
+            </Button>
+          ))}
         </Box>
-      </Container>
+      </Box>
     </Paper>
   );
 };

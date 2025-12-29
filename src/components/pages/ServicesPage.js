@@ -6,38 +6,59 @@ const ServicesPage = () => {
   const services = [
     {
       id: 1,
-      title: "AI Development",
-      description: "We create intelligent AI solutions including machine learning models, natural language processing, and computer vision applications.",
-      image: "/services/card01.png",
-      buttonText: "Explore AI Solutions"
+      title: "Voice Assistant Development",
+      description: "Custom AI voice assistants with Speech-to-Text & Text-to-Speech capabilities. We provide call center & IVR automation solutions with multilingual support for global businesses.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "Explore Voice Solutions"
     },
     {
       id: 2,
-      title: "Software Development",
-      description: "Custom software solutions tailored to your business needs. We develop robust, scalable applications using modern technologies.",
-      image: "/services/card01.png",
-      buttonText: "View Portfolio"
+      title: "Data Scraping & Web Automation",
+      description: "Professional web data extraction services with real-time & scheduled scraping capabilities. We handle data cleaning, storage, and anti-bot & CAPTCHA challenges efficiently.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "Learn More"
     },
     {
       id: 3,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android. We create user-friendly mobile experiences.",
-      image: "/services/card01.png",
-      buttonText: "See Mobile Apps"
+      title: "AI Chatbot Development",
+      description: "Intelligent website & WhatsApp chatbots powered by GPT technology. We create customer support automation systems and knowledge base bots for enhanced user engagement.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "Discover Chatbots"
     },
     {
       id: 4,
-      title: "Web Development",
-      description: "Full-stack web development services creating responsive, high-performance websites and web applications.",
-      image: "/services/card01.png",
-      buttonText: "Discover Solutions"
+      title: "Custom Web Application Development",
+      description: "Enterprise & SaaS solutions including CRM, ERP, HRM, and Payroll systems. We build POS & Management systems with secure & scalable architecture for your business needs.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "View Solutions"
     },
     {
       id: 5,
-      title: "Web Design",
-      description: "Beautiful, intuitive web designs that convert visitors into customers. We focus on user experience and visual appeal.",
-      image: "/services/card01.png",
-      buttonText: "View Designs"
+      title: "API & Backend Development",
+      description: "Robust REST & GraphQL APIs with comprehensive authentication & authorization. We provide third-party API integration and payment gateway integration services.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "Explore APIs"
+    },
+    {
+      id: 6,
+      title: "Data Analytics & Dashboards",
+      description: "Business intelligence dashboards with KPI & reporting systems. We create real-time charts & analytics and custom admin panels for data-driven decision making.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "See Dashboards"
+    },
+    {
+      id: 7,
+      title: "Process Automation",
+      description: "Workflow automation solutions with background jobs & schedulers. We provide Excel / CSV automation and email & SMS automation to streamline your operations.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "Automate Now"
+    },
+    {
+      id: 8,
+      title: "Cloud & DevOps",
+      description: "Docker containerization and cloud deployment on AWS / Azure. We set up CI/CD pipelines and provide performance optimization services for scalable infrastructure.",
+      image: "/services/thumbnail.jpg",
+      buttonText: "Deploy Solutions"
     }
   ];
 
@@ -85,7 +106,7 @@ const ServicesPage = () => {
               alt={service.title}
               sx={{
                 width: '100%',
-                height: 200,
+                height: 150,
                 objectFit: 'cover',
                 borderRadius: 1,
                 mb: 3

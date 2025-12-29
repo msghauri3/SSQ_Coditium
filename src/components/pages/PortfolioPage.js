@@ -28,7 +28,7 @@ const PortfolioPage = () => {
   const projects = [
     {
       id: 1,
-      title: "Website Development",
+      title: "Property Management System",
       description: "Professional web development services offering custom solutions, responsive designs, and modern user experiences for businesses of all sizes.",
       image: "/portfolio/card01.png",
       category: "Web Development",
@@ -39,7 +39,7 @@ const PortfolioPage = () => {
     },
     {
       id: 2,
-      title: "SalonHub",
+      title: "Point of Sale System",
       description: "A comprehensive salon management system featuring online booking, service management, and customer reviews. Perfect for modern salons and beauty centers looking to digitize their operations.",
       image: "/portfolio/card02.png",
       category: "Management System",
@@ -50,7 +50,7 @@ const PortfolioPage = () => {
     },
     {
       id: 3,
-      title: "Review Menu Hub",
+      title: "Voice Chatbot",
       description: "A dynamic restaurant menu and review platform that helps restaurants showcase their offerings and collect customer feedback. Features digital menus, ratings, and customer engagement tools.",
       image: "/portfolio/card03.png",
       category: "Restaurant Platform",
@@ -61,7 +61,7 @@ const PortfolioPage = () => {
     },
     {
       id: 4,
-      title: "Elite POS",
+      title: "AI Powered Analytics Dashboard",
       description: "A powerful Point of Sale system with inventory management, sales tracking, and detailed reporting. Perfect for retail stores, restaurants, and small businesses.",
       image: "/portfolio/card04.png",
       category: "POS System",
@@ -74,7 +74,7 @@ const PortfolioPage = () => {
       id: 5,
       title: "Medical Appointment System",
       description: "A comprehensive medical appointment scheduling system with patient management, appointment tracking, and automated reminders. Ideal for clinics and healthcare providers.",
-      image: "/portfolio/card05.png",
+      image: "/portfolio/card07.png",
       category: "Healthcare System",
       technologies: ["Angular", "Python", "SQLite", "Twilio API"],
       features: ["Appointment Scheduling", "Patient Management", "Automated Reminders", "Medical Records"],
@@ -83,45 +83,12 @@ const PortfolioPage = () => {
     },
     {
       id: 6,
-      title: "AI Analytics Dashboard",
+      title: "Education Management System",
       description: "An intelligent analytics dashboard powered by AI, providing real-time insights, predictive analytics, and data visualization for informed decision-making.",
       image: "/portfolio/card06.png",
       category: "Analytics Platform",
       technologies: ["React", "Python", "TensorFlow", "D3.js"],
       features: ["Real-time Insights", "Predictive Analytics", "Data Visualization", "AI-powered"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 7,
-      title: "Excellence Academy",
-      description: "A comprehensive school management system featuring admissions, programs, events management, and an interactive gallery. Perfect for modern educational institutions.",
-      image: "/portfolio/card07.png",
-      category: "Education System",
-      technologies: ["Laravel", "Vue.js", "MySQL", "File Upload"],
-      features: ["Admissions Management", "Program Management", "Events Calendar", "Student Portal"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 8,
-      title: "Clinic Management System",
-      description: "A specialized system for dental practices featuring patient records, treatment planning, appointment scheduling, and billing management.",
-      image: "/portfolio/card08.png",
-      category: "Healthcare Management",
-      technologies: [".NET", "SQL Server", "React", "Chart.js"],
-      features: ["Patient Records", "Treatment Planning", "Appointment Scheduling", "Billing"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 9,
-      title: "FitZone Gym Management",
-      description: "Comprehensive gym management system featuring membership tracking, class scheduling, trainer management, and performance analytics. Ideal for modern fitness centers.",
-      image: "/portfolio/card09.png",
-      category: "Fitness Management",
-      technologies: ["React Native", "Node.js", "MongoDB", "Push Notifications"],
-      features: ["Membership Tracking", "Class Scheduling", "Trainer Management", "Performance Analytics"],
       liveUrl: "#",
       githubUrl: "#"
     }

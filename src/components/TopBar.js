@@ -1,70 +1,91 @@
 import React from 'react';
-import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material';
+import { AppBar, Toolbar, Box, Typography } from '@mui/material';
 
 const TopBar = () => {
+  const projectNames = [
+    "Data Scraping & Web Automation",
+    "Voice Assistant Development",
+    "Voice Chatbot",
+    "AI Powered Analytics Dashboard",
+    "Data Analytics & Dashboards"
+  ];
+
   return (
     <AppBar 
       position="static" 
       sx={{ 
-        backgroundColor: '#002e5b',
-        boxShadow: '0 4px 16px rgba(0, 46, 91, 0.3)',
+        backgroundColor: 'white',
+        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
         minHeight: '40px', // Reduced height
         py: 0.5 // Reduced padding
       }}
     >
       <Toolbar sx={{ 
         justifyContent: 'space-between',
-        minHeight: '40px !important' // Force reduced height
+        minHeight: '40px !important', // Force reduced height
+        width: '100%'
       }}>
-        <Typography 
-          variant="h5" // Slightly smaller font
-          component="h1" 
+        <Box sx={{ 
+          display: 'flex',
+          alignItems: 'center'
+        }}>
+          <img 
+            src="/logo02.png"
+            alt="Company Logo" 
+            style={{ 
+              width: '200px',
+              height: '60px',
+              objectFit: 'contain'
+            }}
+          />
+        </Box>
+        
+        {/* Scrolling Project Names */}
+        <Box
           sx={{
-            fontWeight: 'bold',
-            background: 'linear-gradient(45deg, #fff 30%, #f1f5f9 90%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            fontSize: '1.4rem' // Adjusted font size
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            overflow: 'hidden',
+            ml: 4,
+            position: 'relative',
+            width: '100%',
+            height: '40px'
           }}
         >
-          coditium.com
-        </Typography>
-        
-        <Box sx={{ display: 'flex', gap: 0.5 }}>
-          <Button 
-            color="inherit" 
-            size="small" // Smaller button
+          <Box
             sx={{
-              borderRadius: '6px',
-              fontSize: '0.8rem',
-              px: 1.5,
-              '&:hover': {
-                backgroundColor: 'rgba(255,255,255,0.1)',
-                transform: 'translateY(-1px)'
+              display: 'flex',
+              animation: 'scroll 25s linear infinite',
+              whiteSpace: 'nowrap',
+              '@keyframes scroll': {
+                '0%': {
+                  transform: 'translateX(0)'
+                },
+                '100%': {
+                  transform: 'translateX(-50%)'
+                }
               }
             }}
           >
-            Login
-          </Button>
-          <Button 
-            variant="contained" 
-            size="small" // Smaller button
-            sx={{
-              backgroundColor: 'white',
-              color: '#002e5b',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              fontSize: '0.8rem',
-              px: 2,
-              '&:hover': {
-                backgroundColor: 'rgba(255,255,255,0.9)',
-                transform: 'translateY(-1px)',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-              }
-            }}
-          >
-            Sign Up
-          </Button>
+            {[...projectNames, ...projectNames].map((name, index) => (
+              <Typography
+                key={index}
+                variant="body2"
+                component="span"
+                sx={{
+                  color: '#002e5b',
+                  fontWeight: 500,
+                  mr: 4,
+                  fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
+                  display: 'inline-block'
+                }}
+              >
+                {name} •
+              </Typography>
+            ))}
+          </Box>
         </Box>
       </Toolbar>
     </AppBar>

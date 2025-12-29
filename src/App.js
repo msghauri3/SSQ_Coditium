@@ -6,16 +6,18 @@ import TopBar from './components/TopBar';
 import LinksBar from './components/LinksBar';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
+import Chatbot from './components/Chatbot';
 import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import ServicesPage from './components/pages/ServicesPage';
+import CoditiumServicesPage from './components/pages/CoditiumServicesPage';
 import PortfolioPage from './components/pages/PortfolioPage';
 import ContactPage from './components/pages/ContactPage';
 
 const App = () => {
   return (
     <Router>
-      <Box sx={{ flexGrow: 1, backgroundColor: 'background.default' }}>
+      <Box sx={{ flexGrow: 1, backgroundColor: 'white' }}>
         <style>
           {`@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }`}
         </style>
@@ -25,15 +27,20 @@ const App = () => {
         <TopBar />
         <LinksBar />
         
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <Box sx={{ backgroundColor: 'white', minHeight: '100vh' }}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/coditium-services" element={<CoditiumServicesPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </Box>
 
         <Footer />
+        
+        <Chatbot />
         
         <ScrollTop>
           <Fab color="primary" size="medium" aria-label="scroll back to top"
