@@ -13,6 +13,7 @@ import ServicesPage from './components/pages/ServicesPage';
 import CoditiumServicesPage from './components/pages/CoditiumServicesPage';
 import PortfolioPage from './components/pages/PortfolioPage';
 import ContactPage from './components/pages/ContactPage';
+import PropertyManagementDetails from './components/ProjectDetails/PropertyManagementDetails';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <Box sx={{ backgroundColor: 'white', minHeight: '100vh' }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/property-management-details" element={<PropertyManagementDetails />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/coditium-services" element={<CoditiumServicesPage />} />
