@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Typography, Box, Table, TableBody, TableRow, TableCell, Paper } from '@mui/material';
 
 const AboutPage = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const aiOfferings = [
     {
       title: "AI Assistant",

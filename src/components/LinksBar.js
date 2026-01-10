@@ -40,7 +40,7 @@ const LinksBar = () => {
         display: 'flex', 
         justifyContent: 'flex-start',
         alignItems: 'center',
-        py: 1.5,
+        py: 1,
         pl: 0
       }}>
         {/* Links aligned to the left */}
@@ -53,16 +53,28 @@ const LinksBar = () => {
               onClick={() => setActiveTab(tab.id)}
               sx={{
                 color: activeTab === tab.id ? 'white' : 'rgba(255, 255, 255, 0.8)',
-                borderBottom: activeTab === tab.id ? '3px solid' : '3px solid transparent',
-                borderColor: 'white',
                 borderRadius: 0,
                 px: 3,
-                transition: 'all 0.3s ease',
+                py: 1,
+                position: 'relative',
                 fontSize: '0.9rem',
                 fontWeight: activeTab === tab.id ? 'bold' : 'normal',
+                transition: 'color 0.3s ease, font-weight 0.3s ease',
                 '&:hover': {
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',
                   color: 'white'
+                },
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: '3px',
+                  backgroundColor: 'white',
+                  transform: activeTab === tab.id ? 'scaleX(1)' : 'scaleX(0)',
+                  transformOrigin: 'center',
+                  transition: 'transform 0.3s ease-in-out'
                 }
               }}
             >

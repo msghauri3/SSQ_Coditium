@@ -6,6 +6,7 @@ import TopBar from './components/TopBar';
 import LinksBar from './components/LinksBar';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
+import ScrollToTopOnRouteChange from './components/ScrollToTopOnRouteChange';
 import Chatbot from './components/Chatbot';
 import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
@@ -18,6 +19,7 @@ import PropertyManagementDetails from './components/ProjectDetails/PropertyManag
 const App = () => {
   return (
     <Router>
+      <ScrollToTopOnRouteChange />
       <Box sx={{ flexGrow: 1, backgroundColor: 'white' }}>
         <style>
           {`@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }`}
