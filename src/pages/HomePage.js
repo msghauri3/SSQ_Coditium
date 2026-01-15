@@ -20,8 +20,8 @@ import {
 } from '@mui/material';
 import { ArrowForward, Close, Launch, Code } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import SliderBar from '../components/SliderBar';
-import LogoMarquee from '../components/LogoMarquee';
+import SliderBar from '../components/SliderBar.js';
+import LogoMarquee from '../components/LogoMarquee.js';
 
 const HomePage = () => {
   const navigate = useNavigate();

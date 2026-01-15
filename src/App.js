@@ -14,7 +14,7 @@ import ServicesPage from './pages/ServicesPage';
 import CoditiumServicesPage from './pages/CoditiumServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
-import PropertyManagementDetails from './ProjectDetails/PropertyManagementDetails';
+import PropertyManagementDetails from './ProjectDetails/PropertyManagementDetails.js';
 import LoginPage from './pages/LoginPage';
 import AdminDashboard from './pages/AdminDashboard';
 
